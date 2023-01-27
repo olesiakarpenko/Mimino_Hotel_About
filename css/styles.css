@@ -104,3 +104,9 @@ img {
     letter-spacing: 0.02em;
     color: var(--hotel-room-title-text-color);
 }
+
+.hotel-about-room-img {
+    width: 244px;
+    height: 322px;
+    margin-left: auto;
+}
