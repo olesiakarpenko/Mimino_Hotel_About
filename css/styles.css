@@ -1,0 +1,106 @@
+
+:root {
+    /* font colors */
+    --hotel-slogan-text-color: #B4B4B4;
+    --hotel-about-logo-text-color: #494848;
+    --hotel-room-title-text-color: #000000;
+    --hotel-about-room-description-text-color: #7A7A7A;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: currentColor;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.container {
+    /* phone screen */
+    min-width: 320px;
+    max-width: 414px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        padding-left: 47px;
+        padding-right: 47px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+        /* padding-left: 15px;
+        padding-right: 15px; */
+    }
+}
+
+.hotel-logo-slogan {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(23/20);
+    color: var(--hotel-slogan-text-color);
+}
+
+.hotel-about-logo {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: calc(43.03/40);
+    letter-spacing: 0.3em;
+    color: var(--hotel-about-logo-text-color);
+}
+
+.hotel-room-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(27.6/24);
+    letter-spacing: 0.05em;
+    color: var(--hotel-room-title-text-color);
+}
+
+.hotel-about-room-description {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(12/14.63);
+    letter-spacing: 0.02em;
+    color: var(--hotel-room-title-text-color);
+}
