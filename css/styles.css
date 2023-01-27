@@ -7,6 +7,12 @@
     --hotel-about-room-description-text-color: #7A7A7A;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -17,15 +23,12 @@ p {
     margin: 0;
 }
 
-.link {
-    text-decoration: none;
-    color: currentColor;
-}
-
 ul {
     list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 a {
@@ -38,10 +41,11 @@ img {
     height: auto;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
+
+
+.link {
+    text-decoration: none;
+    color: currentColor;
 }
 
 .container {
@@ -54,8 +58,6 @@ img {
     
     padding-left: 15px;
     padding-right: 15px;
-    
-    box-sizing: border-box;
 }
 
 @media screen and (min-width: 1024px) {
@@ -73,6 +75,8 @@ img {
         padding-right: 15px; */
     }
 }
+
+
 
 .hotel-logo-slogan {
     font-weight: 400;
