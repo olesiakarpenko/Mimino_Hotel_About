@@ -5,6 +5,13 @@
     --hotel-about-logo-text-color: #494848;
     --hotel-room-title-text-color: #000000;
     --hotel-about-room-description-text-color: #7A7A7A;
+    --hotel-accent-text-color: #F3C653;
+
+    /* background colors */
+
+    --hotel-section-1-bg-color: #FFFDEE;
+    --hotel-section-2-bg-color: #F0ECD6;
+    --hotel-add-bg-color: #000000;
 }
 
 /* reset start */
@@ -22,6 +29,8 @@ h5,
 h6,
 p {
     margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
 ul {
@@ -32,6 +41,7 @@ ul {
 
 li {
     list-style-type: none;
+    text-decoration: none;
 }
 
 .list {
@@ -39,22 +49,24 @@ li {
     list-style-type:none;
     margin: 0;
     padding: 0;
-    text-decoration: none;
 }
 
 a {
     text-decoration: none;
 }
 
+.link {
+    text-decoration: none;
+    color: currentColor;
+    margin: 0;
+    padding: 0;
+}
+
+
 img {
     display: block;
     max-width: 100%;
     height: auto;
-}
-
-.link {
-    text-decoration: none;
-    color: currentColor;
 }
 /* reset end */
 
@@ -68,6 +80,8 @@ img {
     
     padding-left: 15px;
     padding-right: 15px;
+
+    overflow: hidden;
 }
 
 @media screen and (min-width: 1024px) {
@@ -86,13 +100,44 @@ img {
     }
 }
 
+.hotel-item {
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
+.hotel-item.room-one,
+.hotel-item.room-three {
+    background-color: var(--hotel-section-1-bg-color);
+}
+
+.hotel-item.room-two {
+    background-color: var(--hotel-section-2-bg-color);
+}
+
+.hotel-about-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.hotel-about-text-content.room-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    text-align: right;
+    align-items: right;
+}
 
 .hotel-logo-slogan {
     font-weight: 400;
     font-size: 20px;
     line-height: calc(23/20);
     color: var(--hotel-slogan-text-color);
+    margin-bottom: 8px;
 }
 
 .hotel-about-logo {
@@ -101,6 +146,11 @@ img {
     line-height: calc(43.03/40);
     letter-spacing: 0.3em;
     color: var(--hotel-about-logo-text-color);
+    margin-bottom: 32px;
+}
+
+.hotel-about-room-detail.room-two {
+    margin-left: auto;
 }
 
 .hotel-room-title {
@@ -109,6 +159,7 @@ img {
     line-height: calc(27.6/24);
     letter-spacing: 0.05em;
     color: var(--hotel-room-title-text-color);
+    margin-bottom: 12px;
 }
 
 .hotel-about-room-description {
@@ -116,11 +167,87 @@ img {
     font-size: 12px;
     line-height: calc(12/14.63);
     letter-spacing: 0.02em;
-    color: var(--hotel-room-title-text-color);
+    color: var(--hotel-about-room-description-text-color);
+
+    width: 258px;
+    text-align: left;
+
+    margin-bottom: 32px;
 }
 
+/* .hotel-about-room-description.room-two {
+    margin-left: auto;
+} */
+
 .hotel-about-room-img {
+    display: block;
     width: 244px;
     height: 322px;
     margin-left: auto;
+    margin-bottom: 32px;
 }
+.hotel-about-room-img.room-two {
+    display: block;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+/* should be corrected */
+.swiper {
+    margin-bottom: 30px; 
+}
+
+.hotel-about-swiper-slide {
+    width: 194px;
+    height: 194px;
+    margin-right: 16px;
+}
+
+.hotel-about-buttons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hotel-about-link.link,
+.hotel-about-btn {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(19.5/16);
+    letter-spacing: 0.02em;
+    color: var(--hotel-accent-text-color);
+    background-color: var(--hotel-add-bg-color);
+
+    border-radius: 25px;
+    outline: none;
+
+    width: 236px;
+    height: 48px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    cursor: pointer;
+}
+
+.hotel-about-link.section-1,
+.hotel-about-link.section-3 {
+    border: 2x solid var(--hotel-section-1-bg-color);
+}
+
+.hotel-about-link.section-2 {
+    border: 2x solid var(--hotel-section-2-bg-color);
+}
+
+.hotel-about-btn.section-1,
+.hotel-about-btn.section-3 {
+    border: 2x solid var(--hotel-section-1-bg-color);
+}
+
+.hotel-about-btn.section-2 {
+    border: 2x solid var(--hotel-section-2-bg-color);
+}
+
